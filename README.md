@@ -1,52 +1,82 @@
-# Arch Setup & Package Manager 🧰🐧
+# 📸 MS Snipping Tool Clone
 
-Ein multifunktionales Python-GUI-Tool zur schnellen Einrichtung und Verwaltung eines Arch Linux-Systems.  
-Entstanden als privates Tool zur Automatisierung von typischen Setup-Schritten nach einer frischen Installation – mit Fokus auf Usability, Effizienz und Übersichtlichkeit.
+## 🚀 Überblick
 
----
+Ein leistungsstarkes Screenshot-Tool für Linux, inspiriert vom Microsoft Snipping Tool. Dieses Python-basierte Programm ermöglicht es Benutzern, Screenshots mit einer Vielzahl von Funktionen zu erstellen, zu bearbeiten und zu teilen.
 
-## 🔧 Funktionen
+![Screenshot der Anwendung](screenshot.png)
 
-- **„Must-Haves & Hacks“-Tab**  
-  ✅ Checkliste typischer Arch-Tools  
-  ⚙️ Auto-Install über `pacman`, Git oder Script  
-  📊 Fortschrittsanzeige + Logging
+## ✨ Funktionen
 
-- **Pacman Manager**  
-  🔍 Paket-Suche (`pacman -Ss`)  
-  📥 Ein-Klick-Installation  
-  📋 Anzeigen aller installierten Pakete
+### Screenshot-Modi
+- **Rechteckiger Ausschnitt**: Wählen Sie genau den Bereich aus, den Sie erfassen möchten
+- **Freiform-Ausschnitt**: Zeichnen Sie einen individuellen Auswahlbereich
+- **Fenster-Ausschnitt**: Erfassen Sie ein spezifisches Fenster
+- **Vollbild-Ausschnitt**: Nehmen Sie den gesamten Bildschirm auf
 
-- **Pip Manager**  
-  🔍 Paket-Suche (`pip3 search`)  
-  📥 Ein-Klick-Installation  
-  📋 Liste installierter Pakete
+### Bearbeitungswerkzeuge
+- **Stift**: Zeichnen Sie präzise Linien
+- **Marker**: Heben Sie Bereiche hervor
+- **Radiergummi**: Entfernen Sie unerwünschte Markierungen
+- **Formen**: Rechtecke und Ellipsen hinzufügen
 
-- **Systeminformationen**  
-  🧠 Infos zu OS, Kernel, etc.  
-  🔍 Anzeige von `/etc/os-release` und `uname -a`
+### Zusatzfunktionen
+- Verzögerungsoption für Screenshots
+- Direktes Speichern und Kopieren
+- Benutzerfreundliche Oberfläche
+- Tastaturkürzel für schnellen Zugriff
 
-- **GUI mit PyQt5**  
-  🖥️ Moderne Oberfläche  
-  🧪 Mit integriertem Logging + dynamischem Feedback
+## 🔧 Voraussetzungen
 
----
+- Python 3.8+
+- PyQt5
+- gnome-screenshot
+- xclip
 
-## 🚨 Hinweis
+## 🛠️ Installation
 
-- Dieses Tool erfordert **Root-Rechte** beim Start (`sudo`) und prüft das automatisch.
-- Es ist **Work-in-Progress** – manche Tools (z. B. `auto-cpufreq`) werden speziell behandelt und per Git installiert.
-- Der Fokus liegt auf **Arch Linux / Manjaro / EndeavourOS** – auf anderen Distros nicht getestet.
-
----
-
-## 📦 Abhängigkeiten
-
-- Python 3
-- `PyQt5`
-- `git`
-- Optional: `yay` oder `paru` für AUR-Pakete
-
-### Installation (wenn nötig):
+1. Klonen Sie das Repository:
 ```bash
-sudo pacman -S python-pyqt5 git
+git clone https://github.com/IhrBenutzername/ms-snipping-tool-clone.git
+cd ms-snipping-tool-clone
+```
+
+2. Installieren Sie die Abhängigkeiten:
+```bash
+pip install PyQt5
+sudo apt-get install gnome-screenshot xclip
+```
+
+3. Starten Sie die Anwendung:
+```bash
+python3 snipping_tool.py
+```
+
+## 🎮 Verwendung
+
+- **Schnell-Screenshot**: `Strg+Shift+S`
+- **Neuer Screenshot**: `Strg+N`
+- **In Zwischenablage kopieren**: `Strg+C`
+
+## 🤝 Beitragen
+
+Beiträge sind willkommen! Bitte beachten Sie:
+1. Forken Sie das Projekt
+2. Erstellen Sie einen Feature-Branch (`git checkout -b feature/AmazingFeature`)
+3. Committen Sie Ihre Änderungen (`git commit -m 'Add some AmazingFeature'`)
+4. Pushen Sie zum Branch (`git push origin feature/AmazingFeature`)
+5. Öffnen Sie einen Pull Request
+
+## 📄 Lizenz
+
+Dieses Projekt steht unter der MIT-Lizenz. Weitere Informationen finden Sie in der `LICENSE`-Datei.
+
+## 🙏 Danksagung
+
+- [PyQt5](https://www.riverbankcomputing.com/software/pyqt/intro) für die großartige GUI-Bibliothek
+- [gnome-screenshot](https://gitlab.gnome.org/GNOME/gnome-screenshot) für Screenshot-Funktionalität
+- Inspiriert durch das Microsoft Snipping Tool
+
+---
+
+**Entwickelt mit ❤️ von Tim Steegmüller**
